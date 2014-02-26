@@ -1,6 +1,6 @@
 daintynetwork
 =============
 
-my personal website
+new design for my personal website. Coded using SASS & Pure Grids CSS.
 
-^_^v
+![screenshot] (http://i.imgur.com/BZvJWVq.png)
