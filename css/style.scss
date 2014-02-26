@@ -1,0 +1,201 @@
+/************************************************
+
+			DAINTYNETWORK.info V2 (2014)
+
+			coded by helena ng q^_^p
+
+*************************************************/
+
+@import 'reset';
+
+@import url(http://fonts.googleapis.com/css?family=Alegreya:400italic,400);
+@import url(http://fonts.googleapis.com/css?family=Artifika);
+
+@font-face {
+    font-family: 'typoslabserif-lightregular';
+    src: url('font/TypoSlabserif-Light-webfont.eot');
+    src: url('font/TypoSlabserif-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/TypoSlabserif-Light-webfont.woff') format('woff'),
+         url('font/TypoSlabserif-Light-webfont.ttf') format('truetype'),
+         url('font/TypoSlabserif-Light-webfont.svg#typoslabserif-lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/***********some SASS presets*******************/
+$color1: #f6b5a6;
+$color2: #c58c8f;
+$color3: #9DB4AA;
+$grey: #666666;
+$white: #ffffff;
+$black: #000000;
+
+$title-font: 'typoslabserif-lightregular', serif;
+$main-font: 'Alegreya', serif;
+$accent-font: 'Artifika', serif;
+
+//////////////////////////////////////////////////
+
+
+body {
+background-image: url('../images/background.jpg');
+background-repeat: repeat;
+color: $black;
+font-family: $main-font;
+font-size: 62.5%;
+text-align: justify;
+}
+
+::selection {
+	background: $color1;
+	color: $white; /* Safari */
+	}
+::-moz-selection {
+	background: $color1;
+	color: $white;  /* Firefox */
+}
+
+a:link, a:visited, a:active {
+	font-family: $main-font; 
+	font-size: 1.3rem;
+	color: $color3; 
+	font-style: italic; 
+	text-decoration: none; 
+	text-transform: lowercase;}
+
+a:hover {cursor: help; text-decoration: none; font-weight: bold;}
+
+header {
+	margin-top: 8rem;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+.title {
+background: $color1;
+margin-left: 5rem;
+color: $black;
+font-family: $title-font;
+font-size: 5rem;
+line-height: 6rem;
+letter-spacing: 1rem;
+text-align: center;
+text-transform: uppercase;
+}
+
+.retro-snake-header{
+	max-width: 40%;
+	float: right;
+	margin-top: -3rem;
+	margin-right: 5rem;
+}
+
+.name-title {
+	font-family: $title-font;
+	color: $color1;
+	font-size: 1.5rem;
+	letter-spacing: .1rem;
+	line-height:  2rem;
+}
+
+nav {
+	background: $white;
+	width: 35%;
+	height: auto;
+	padding: 2rem 2rem 2rem 2rem;
+	margin: 0 0 0 10%;
+	display: block;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 3rem;
+}
+
+em {
+	color: $color2;
+	font-style: normal;
+}
+
+i {font-style: normal;}
+
+/* CO DROPS LINK EFFECT */
+
+
+.cl-effect-9 a {
+	color: $color3;
+	letter-spacing: .1rem;
+	display: block;
+	float: left;
+}
+
+.cl-effect-9 a::before,
+.cl-effect-9 a::after {
+	position: absolute;
+	opacity: 0.2;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+.cl-effect-9 a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-9 a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.cl-effect-9 a span:last-child {
+	z-index: 1;
+	display: block;
+	padding: 8px 0 0 0;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: .9rem;
+	font-family: $main-font;
+	letter-spacing: 0rem;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:focus::before {
+	height: 6px;
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:hover::after,
+.cl-effect-9 a:focus::before,
+.cl-effect-9 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cl-effect-9 a:hover span:last-child,
+.cl-effect-9 a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
